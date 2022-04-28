@@ -5,8 +5,17 @@
 		padding-bottom: 54px;
 		position: relative;
 		
-		@media (max-width: 660px) {
+		@media (max-width: 1024px) {
+			padding-top: 143px;
+			padding-bottom: 51px;
+		}
+		@media (max-width: 768px){
+			padding-top: 162px;
+			padding-bottom: 97px;
+		}
+		@media (max-width: 460px) {
 			padding-top: 118px;
+			padding-bottom: 52px;
 		}
 		
 		&::before {

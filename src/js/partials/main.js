@@ -15,8 +15,6 @@ headerBurger.addEventListener("click", function(e) {
 });
 
 
-
-
 /* ------------ScrollTrigger---------------------ScrollTrigger-----------------------------------ScrollTrigger------------------- */
 const tl = gsap.timeline();
 

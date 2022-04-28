@@ -21,12 +21,17 @@ body.active {
 }
 
 .container{
-	width: 1224px;
 	padding: 0 12px;
 	margin: 0 auto;
-	max-width: 100%;
-	@media (max-width: 768px){
-		padding: 0 6px;
+	max-width: 1224px;
+	@media (max-width: 1300px){
+		padding: 0 50px;
+	}
+	@media (max-width: 992px){
+		padding: 0 20px;
+	}
+	@media (max-width: 500px){
+		padding: 0 10px;
 	}
 }
 
@@ -61,10 +66,9 @@ body.active {
 
 /* -------------------------sec1-------------------------- */
 .sec1 {
-	
 	&__body {
 		position: relative;
-		padding-top: 257px;
+		padding-top: 217px;
 		padding-left: 227px;
 		
 		@media (max-width: 1024px) {
@@ -242,7 +246,7 @@ body.active {
 
 /* -------------------------sec2-------------------------- */
 .sec2 {
-	margin-top: 126px;
+	margin-top: 128px;
 	margin-bottom: 167px;
 	@media (max-width: 1024px){
 		margin-top: 96px;
@@ -261,17 +265,20 @@ body.active {
 		display: grid;
 		grid-template: 1fr 1fr / repeat(3, 232px);
 		justify-content: space-between;
-		row-gap: 80px;
+		row-gap: 100px;
 		@media (max-width: 1024px){
-			row-gap: 40px;
+			row-gap: 80px;
 		}
 		@media (max-width: 767px) {
-			row-gap: 30px;
+			row-gap: 40px;
+			column-gap: 40px;
 			grid-template: 1fr 1fr 1fr / repeat(2, 232px);
 			justify-content: space-around;
 		}
-		@media (max-width: 500px){
-			grid-template: 1fr 1fr 1fr / repeat(2, 162px);
+		@media (max-width: 520px){
+			row-gap: 30px;
+			column-gap: 10px;
+			grid-template: 1fr 1fr 1fr / repeat(2, 165px);
 		}
 		@media (max-width: 355px){
 			grid-template: 1fr 1fr 1fr / repeat(2, 142px);
@@ -373,9 +380,11 @@ body.active {
 		background-size: 98px 100%,
 		100vw 100vh;
 	}
-	
+	&__container {
+		position: relative;
+	}
 	&__btn-wrapper {
-		padding-top: 167px;
+		padding-top: 127px;
 		display: flex;
 		justify-content: flex-end;
 		position: relative;
@@ -428,16 +437,20 @@ body.active {
 		opacity: 0.7;
 	}
 	&__items {
-		margin-top: 270px;
+		margin-top: 80px;
+		padding-bottom: 302px;
 		display: grid;
 		grid-template: repeat(6, 1fr) / 1fr;
 		gap: 240px;
+		@media (max-width: 850px){
+			margin-top: 120px;
+		}
 		@media (max-width: 768px){
 			margin-top: 198px;
 			gap: 188px;
 		}
 		@media (max-width: 450px){
-			margin-top: 300px;
+			margin-top: 172px;
 		}
 	}
 	
@@ -673,7 +686,6 @@ body.active {
 	}
 }
 
-
 .sec4__lab {
 	position: relative;
 	padding-top: 36%;
@@ -686,8 +698,6 @@ body.active {
 		object-fit: cover;
 	}
 }
-
-
 
 /* -----------------------sec5----------------sec5------------- */
 .sec5 {
@@ -797,13 +807,16 @@ body.active {
 		align-items: flex-end;
 		@media (max-width: 1024px){
 			margin-top: -100px;
+			padding-bottom: 44px;
 		}
 		@media (max-width: 768px){
 			margin-top: -90px;
+			padding-bottom: 68px;
 			grid-template: 1fr / 0.9fr 1.1fr;
 		}
 		@media (max-width: 600px){
 			margin-top: 24px;
+			padding-bottom: 16px;
 			align-items: center;
 		}
 	}
@@ -878,7 +891,10 @@ body.active {
 		z-index: 2;
 		padding-bottom: 146px;
 		@media (max-width: 1024px){
-			padding-bottom: 110px;
+			padding-bottom: 66px;
+		}
+		@media (max-width: 768px){
+			padding-bottom: 29px;
 		}
 		@media (max-width: 600px){
 			padding-bottom: 0;
@@ -939,7 +955,6 @@ body.active {
 	}
 }
 
-
 /* ---------------------sec6--------------------sec6------------------- */
 .sec6 {
 	background: url('../images/6sec/2.jpg') center / cover no-repeat;
@@ -949,7 +964,6 @@ body.active {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 90px;
 		@media (max-width: 1024px){
 			padding-top: 85px;
 			padding-bottom: 106px;
@@ -961,7 +975,6 @@ body.active {
 		@media (max-width: 500px){
 			padding-top: 51px;
 			padding-bottom: 57px;
-			gap: 43px;
 		}
 	}
 	
@@ -1001,8 +1014,29 @@ body.active {
 	}
 	
 	&__icon {
+		margin-top: 90px;
+		margin-bottom: 90px;
+		width: 278px;
+		height: 278px;
+		@media (max-width: 1024px) {
+			width: 254px;
+			height: 254px;
+			margin-top: 88px;
+			margin-bottom: 74px;
+		}
+		@media (max-width: 768px){
+			margin-top: 89px;
+			margin-bottom: 84px;
+		}
+		@media (max-width: 400px){
+			width: 204px;
+			height: 204px;
+			margin-top: 51px;
+			margin-bottom: 43px;
+		}
 		img {
-
+			width: 100%;
+			height: 100%;
 		}
 	}
 	
@@ -1026,6 +1060,8 @@ body.active {
 	}
 
 	&__text {
+		margin-right: 20px;
+		margin-left: 20px;
 		position: relative;
 		background: #BD30BC;
 		border-radius: 20px;

@@ -98,6 +98,9 @@
 		@media (max-width: 800px){
 			gap: 14px;
 		}
+		@media (max-width: 330px) {
+			gap: 9px;
+		}
 	}
 
 	&__item {
@@ -128,11 +131,11 @@
 		padding: 5px 10px;
 		font-weight: 700;
 		font-size: 18px;
-		line-height: 26px;
+		line-height: 20px;
 		letter-spacing: 0.05em;
 		color: #FFFFFF;
 		transition: all 0.5s ease;
-		@media (max-width: 359px){
+		@media (max-width: 400px){
 			font-size: 14px;
 		}
 	}
