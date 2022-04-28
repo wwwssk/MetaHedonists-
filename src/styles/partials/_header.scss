@@ -36,7 +36,7 @@
 		@media (max-width: 992px) {
 			gap: 22px;
 		}
-		@media (max-width: 768px){
+		@media (max-width: 767px){
 			display: none;
 		}
 	}
@@ -46,8 +46,12 @@
 		height: 30px;
 		width: 37px;
 		position: relative;
-		@media (min-width: 769px){
+		@media (min-width: 767px){
 			display: none;
+		}
+		@media (max-width: 320px){
+			height: 26px;
+			width: 33px;
 		}
 		span {
 			transition: all 0.5s;
@@ -113,12 +117,12 @@
 			@media (max-width: 800px){
 				margin-right: 0;
 			}
-			@media (max-width: 768px){
+			@media (max-width: 767px){
 				display: none;
 			}
 		}
 		&:last-child{
-			@media (max-width: 768px){
+			@media (max-width: 767px){
 				display: none;
 			}
 		}
@@ -189,7 +193,7 @@
 	transition: top 0.5s, opacity 0.5s, transform 0s 0s;
 }
 .menu-mobile {
-	@media (min-width: 769px){
+	@media (min-width: 768px){
 		display: none;
 	}
 	position: absolute;

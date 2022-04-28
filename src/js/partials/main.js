@@ -18,12 +18,12 @@ headerBurger.addEventListener("click", function(e) {
 /* ------------ScrollTrigger---------------------ScrollTrigger-----------------------------------ScrollTrigger------------------- */
 const tl = gsap.timeline();
 
-tl.fromTo('.sec1__body', 1,{opacity: '1',}, {opacity: '0'}, 1)
+tl.fromTo('.sec1__body', 1,{opacity: '1',}, {opacity: '0'}, 0)
 
 ScrollTrigger.create({
 	animation: tl,
-	trigger: '.sec1__wizard',
-	start: '-200px top',
+	trigger: '.sec1__body',
+	start: '0 0',
 	end: 'center',
 	scrub: true,
 	pin: true,
@@ -31,19 +31,27 @@ ScrollTrigger.create({
 
 const tl1 = gsap.timeline();
 
-tl1.fromTo('.sec3__container',0.5, {x: '0', y: '0'}, {x: '0', y: '-80%'},0.05)
+const sec3 = document.querySelector('.sec3');
+const sec1 = document.querySelector('.sec1');
+const sec2 = document.querySelector('.sec2');
+
+const windowH = window.innerHeight;
+const sec3H = sec3.offsetHeight;
+
+const dif = sec3H - windowH;
 
 ScrollTrigger.create({
 	animation: tl1,
-	trigger: '.sec3',
-	start: 'top top',
-	end: 'bottom',
+	trigger: '.sec3__images',
+	start: '-80px',
+	endTrigger : "#Manufacturing",
+	end: 'bottom bottom',
 	scrub: true,
 	pin: true,
 })
 
 
-// Прокрутка при клике
+/* ----------------------Прокрутка при клике--------------- */
 $('.click').on('click', function() {
 
 	let href = $(this).attr('href');
@@ -51,8 +59,8 @@ $('.click').on('click', function() {
 	$('html, body').animate({
 		scrollTop: $(href).offset().top
 	}, {
-	    duration: 770,   // по умолчанию «400» 
-	    easing: "linear" // по умолчанию «swing» 
+		duration: 700,
+		easing: "linear"
 	});
 
 	return false;
