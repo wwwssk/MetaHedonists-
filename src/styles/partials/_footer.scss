@@ -48,13 +48,16 @@
 	
 	&__form {
 		max-width: 1000px;
-		display: flex;
-		justify-content: space-between;
 		margin: 0 auto;
 		outline: 2px solid #B8AAFF;
 		-webkit-border-radius: 5px;
 		border-radius: 5px;
 		margin-top: 6px;
+		overflow: hidden;
+		form {
+			display: flex;
+			justify-content: space-between;
+		}
 		input[type="text"] {
 			height: 41px;
 			display: block;
