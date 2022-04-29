@@ -2,7 +2,6 @@ const { src, dest, parallel, series, watch } = require('gulp');
 
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify-es').default;
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
@@ -52,7 +51,6 @@ function scripts() {
 		.pipe(rigger())
 		.pipe(sourcemaps.init())
 		.pipe(concat('main.min.js'))
-		.pipe(uglify())
 		.pipe(sourcemaps.write('./maps'))
 		.pipe(dest('public/js/'))
 		.pipe(browserSync.stream())
